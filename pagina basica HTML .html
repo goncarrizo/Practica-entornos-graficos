@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+    <!--
+    1. Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última?
+    2. ¿Cuáles son los principios básicos que el W3C recomienda seguir para la creación de documentos
+    con HTML?
+    3. En las Especificaciones de HTML, ¿cuándo un elemento o atributo se considera desaprobado? ¿y
+    obsoleto?
+    4. Qué es el DTD y cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?
+    5. Qué son los metadatos y cómo se especifican en HTML?
+
+
+  1. HTML (HyperText Markup Language) es el lenguaje de publicación de la Web.
+     Fue creado por Tim Berners-Lee en 1991. Sus versiones fueron:
+     - HTML 1.0 (1991)
+     - HTML 2.0 (1995)
+     - HTML 3.2 (1997)
+     - HTML 4.0 (1997)
+     - HTML 4.01 (1999)
+     - XHTML 1.0 (2000)
+     - HTML5 (2014)
+     La versión actual es el HTML Living Standard, mantenido por WHATWG.
+
+  2. El W3C recomienda tres principios básicos para crear documentos HTML:
+     - Separar estructura y presentación (usar CSS para estilos, no atributos HTML).
+     - Considerar la accesibilidad universal (que sea usable por todos los usuarios).
+     - Ayudar a los agentes de usuario con la representación incremental del contenido.
+
+  3. Un elemento o atributo es DESAPROBADO cuando quedó anticuado por nuevas
+     estructuras; sigue funcionando pero se desaconseja su uso y puede volverse
+     obsoleto en versiones futuras.
+     Es OBSOLETO cuando ya no está definido en la especificación y no tiene
+     garantía de soporte por ningún agente de usuario.
+
+  4. El DTD (Document Type Definition) declara qué versión de HTML usa el documento.
+     HTML 4.01 tiene tres DTDs posibles:
+     - Strict: solo elementos y atributos no desaprobados.
+     - Transitional: incluye además los elementos y atributos desaprobados.
+     - Frameset: incluye todo lo anterior más los marcos (frames).
+
+  5. Los metadatos son datos que describen al documento (autor, palabras clave,
+     codificación, etc.). No se muestran en la página pero los usan los navegadores
+     y motores de búsqueda. Se especifican en el <head> con el elemento <meta>:
+     <meta name="keywords" content="casa, venta, alquiler" />
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+-->
+
+<!--
+
+2.a)
+     <!--  <!-- Código controlado el día 12/08/2009 →
+        es un comentario tipico del lenguaje de etiquetado -->
+<!--
+2.b)
+<div id="bloque1">Contenido del bloque1</div>
+el div es una etiqueta de bloque que se usa para agrupar contenido y aplicar estilos o scripts. El id es un identificador único para ese bloque, que permite referenciarlo desde CSS o JavaScript.
+2.c)
+<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32"
+longdesc="detalles.htm" />
+El elemento <img> se usa para insertar imágenes en la página. El atributo src especifica la URL de la imagen, alt proporciona un texto alternativo para accesibilidad, id y name son identificadores para referenciar la imagen, width y height definen su tamaño, y longdesc ofrece una descripción detallada de la imagen en otra página.
+2.d)
+<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+son metadatos que se incluyen en el <head> del documento. El primero define palabras clave para motores de búsqueda, con un atributo lang que indica el idioma. El segundo establece una fecha de expiración para el documento, indicando cuándo debería considerarse obsoleto.
+2.e)
+<a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8"
+rel="help">Resumen HTML </a>
+es un enlace con atributos que especifican su destino, tipo, idioma, codificación y relación.
+2.f)
+<table width="200" summary="Datos correspondientes al ejercicio vencido">
+<caption align="top"> Título </caption>
+<tr>
+<th scope="col">&nbsp;</th>
+<th scope="col">A</th>
+<th scope="col">B</th>
+<th scope="col">C</th>
+</tr>
+<tr>
+<th scope="row">1º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th scope="row">2º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+es una tabla con un ancho de 200 píxeles y un resumen que describe su contenido. La tabla tiene una leyenda (caption) alineada en la parte superior, y filas con encabezados de columna y fila para organizar los datos.
+
+
+
+-->
+
+
+<!-- ejercicios 3 -->
+<a href="http://www.google.com.ar">Click aquí para ir a Google</a> un link por el cual se puede acceder a la pagina 
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a> link que abre en otra pestania el sitio ingresado 
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help"> texto que tiene las apreiencia de un link html 
+<a href="#">Click aquí para ir a Google</a> link no funcional ya que no posee e url
+<a href="#arriba">Click aquí para volver arriba</a> link no funcional que no tiene url 
+<a name="arriba" id="arriba"></a> link que no se muestra en la pagina al no mostrar nada pero que sirve para marcar un punto de anclaje al cual se puede acceder con el link anterior
+
+<!-- b -->
+
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+imagen seguida de un link, el link no incluye a la imagen
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>
+link que incluye a la imagen, al hacer click en la imagen se accede a google, el texto "Click aquí" no forma parte del link
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="ima
+gen1" />Click aquí</a></p>
+link que incluye a la imagen y al texto, al hacer click en cualquiera de los dos se accede a google
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a>
+<a href="http://www.google.com.ar">Click aquí</a></p>
+texto e imagen que te llevan a google al tener cada uno su propio link, al hacer click en la imagen o en el texto se accede a google
+
+<!-- c -->
+
+<ul>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ul>
+lista con 3 elemanto con viñetas
+<ol>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ol>
+lista con 3 elementos numerados 
+
+<ol>
+<li>xxx</li>
+</ol>
+<ol>
+<li value="2">yyy</li>
+</ol>
+<ol>
+<li
+value="3">zzz</li>
+</ol>
+lista con 3 elementos numerados, el primer elemento tiene el valor por defecto de 1, el segundo elemento tiene un valor de 2 y el tercer elemento tiene un valor de 3, por lo que la lista se muestra como una lista numerada del 1 al 3 aunque cada elemento tenga su propio valor
+
+<blockquote>
+<p>1. xxx<br />
+2. yyy<br />
+3. zzz</p>
+</blockquote>
+cita que contiene un párrafo con 3 líneas, cada línea representa un elemento de una lista numerada, aunque no es una lista propiamente dicha ya que no se usan las etiquetas de lista, sino que se simula con saltos de línea dentro del párrafo.
+
+<!-- d -->
+<table border="1" width="300">
+<tr>
+<th>Columna 1</th>
+<th>Columna 2</th>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+tabla con un borde de 1 píxel y un ancho de 300 píxeles, que contiene dos columnas y tres filas. La primera fila tiene encabezados de columna, mientras que las siguientes filas contienen celdas con datos.
+<!-- e -->
+
+<table width="200">
+<caption>
+    Título
+</caption>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">
+&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+tabla con un ancho de 200 píxeles, que contiene una leyenda (caption) con el título "Título". La tabla tiene dos filas y tres columnas, y cada celda tiene un fondo de color gris claro (#dddddd). Las celdas están vacías, representadas por &nbsp; para mantener su tamaño.
+
+<table width="200">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+tabla contenida en un ancho de 200 píxeles, que tiene una fila con una celda que abarca las tres columnas (colspan="3") y contiene un div alineado al centro con el texto "Título". Las siguientes filas tienen celdas con fondo gris claro (#dddddd) y están vacías, representadas por &nbsp; para mantener su tamaño.
+<!-- f -->
+ <table width="200">
+<tr>
+<td colspan="3"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2" bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+tabla contnida en un ancho de 200 pixeles, que tiene que tiene una fila con una celda que abarca las tres columnas (colspan="3") y contiene un div alineado al centro con el texto "Título". Las siguientes filas tienen celdas con fondo gris claro (#dddddd) y están vacías, representadas por &nbsp; para mantener su tamaño.
