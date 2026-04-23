@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="last-modified" content="2008-01-01" />
+  <title>UTN - Ejercitación 4</title>
+</head>
+<body>
+
+  <a href="http://www.utn.edu.ar">
+    <img src="logo-utn.gif" alt="UTN-FRRO" width="80" height="60" />
+  </a>
+  <hr />
+
+  <h1>AÑO 2008</h1>
+
+  <table border="1">
+    <tr>
+      <td>Fecha: …………………..</td>
+      <th colspan="1">Exámenes</th>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>Aprobados<br />24/30</td>
+    </tr>
+  </table>
+
+  <ol>
+    <li><a href="#enunciado">Enunciado del examen</a></li>
+    <li><a href="resolucion.html" target="_blank">Resolución</a></li>
+  </ol>
+
+  <p>Puede realizar consultas completando el siguiente formulario:</p>
+  <form action="mailto:x@x.com" method="post" enctype="text/plain">
+    <label>e-mail: <input type="text" name="email" /></label><br />
+    <label>consulta: <textarea name="consulta" rows="4" cols="30"></textarea></label><br />
+    <input type="submit" value="ENVIAR" />
+    <input type="reset" value="BORRAR" />
+  </form>
+
+
+  <a name="enunciado" id="enunciado"></a>
+  <h2>Enunciado del examen</h2>
+  <blockquote>
+    <p>Ejercicio 1: ………………………<br />
+    ……………………………………….</p>
+    <p>Ejercicio 2: ………………………<br />
+    ……………………………………….</p>
+  </blockquote>
+
+  <p>Para más información dirigirse a
+    <a href="mailto:contacto@xx.com">contacto@xx.com</a>
+  </p>
+
+</body>
+</html>

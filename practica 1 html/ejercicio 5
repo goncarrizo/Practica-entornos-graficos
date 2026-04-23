@@ -1,0 +1,76 @@
+<!-- ARCHIVO 1: index.html (estructura de marcos) -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+  "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+  <title>Ejercitación 5 - Marcos</title>
+</head>
+<frameset rows="100px, *, 60px">
+
+  <frameset cols="75%, 25%">
+    <frame src="encabezado.html" name="encabezado" />
+    <frame src="logo.html" name="logo" />
+  </frameset>
+
+  <frameset cols="25%, 75%">
+    <frame src="menu.html" name="menu" />
+    <frame src="Articulos.htm" name="principal" />
+  </frameset>
+
+  <frame src="menu.html" name="pie" />
+
+</frameset>
+<!-- ARCHIVO 2: encabezado.html -->
+<head><title>Encabezado</title></head>
+<body>
+  <h2>Bienvenidos a nuestra empresa</h2>
+</body>
+</html>
+<!-- ARCHIVO 3: logo.html -->
+<head><title>Logo</title></head>
+<body>
+  <img src="logo.jpg" alt="Logo de la empresa" width="100" />
+</body>
+</html>
+
+<!-- ARCHIVO 3: logo.html -->
+<head><title>Logo</title></head>
+<body>
+  <img src="logo.jpg" alt="Logo de la empresa" width="100" />
+</body>
+</html>
+
+<!-- ARCHIVO 4: menu.html -->
+<head><title>Menú</title></head>
+<body>
+  <ul>
+    <li><a href="Articulos.htm" target="principal">Artículos</a></li>
+    <li><a href="MasInfo.htm" target="principal">Más Info</a></li>
+  </ul>
+</body>
+</html>
+
+<!-- ARCHIVO 5: Articulos.htm -->
+<head><title>Artículos</title></head>
+<body>
+  <h2>Artículos en existencia</h2>
+  <table border="1">
+    <tr>
+      <th>Artículo</th>
+      <th>Precio</th>
+    </tr>
+    <tr>
+      <td>Producto A</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>Producto B</td>
+      <td>$250</td>
+    </tr>
+    <tr>
+      <td>Producto C</td>
+      <td>$400</td>
+    </tr>
+  </table>
+</body>
+</html>
