@@ -1,0 +1,54 @@
+1. ¿ Qué es CSS y para qué se usa?
+CSS (Cascading Style Sheets) es un lenguaje de hojas de estilo que define la presentación visual de documentos HTML. Permite separar el contenido (HTML) de su apariencia, controlando colores, tipografías, márgenes, posicionamiento y más. Esto hace el código más mantenible y permite aplicar un mismo estilo a múltiples páginas.
+2. CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?
+
+Una regla CSS tiene dos partes: un selector (indica a qué elemento se aplica) y un bloque de declaraciones entre llaves. Cada declaración es una propiedad y su valor separados por dos puntos, terminando en punto y coma.
+
+3. ¿ Cuáles son las tres formas de dar estilo a un documento?
+Inline: atributo style directamente en la etiqueta HTML.
+<p style="color: red;">...</p>
+
+Interna (embebida): bloque <style> dentro del <head>.
+<style> p { color: red; } </style>
+
+Externa: archivo .css enlazado con <link> en el <head>.
+<link rel="stylesheet" href="estilos.css">
+4. ¿ Cuáles son los distintos tipos de selectores más utilizados?
+Ejemplifique cada uno.
+
+Universal * { margin: 0; } — aplica a todos los elementos.
+
+Tipo/etiqueta p { color: red; } — aplica a todos los <p>.
+
+Clase .destacado { font-weight: bold; } — aplica a class="destacado".
+
+ID #menu { background: blue; } — aplica al elemento con id="menu".
+
+Descendente div p { color: green; } — <p> dentro de <div>.
+
+Atributo a[href] { color: blue; } — elementos con ese atributo.
+
+Agrupado h1, h2, h3 { font-family: arial; } — varios selectores a la vez.
+
+5. ¿ Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos?
+
+Una pseudo-clase selecciona elementos según su estado o posición, no solo su tipo. Se escribe con : después del selector.
+
+Para vínculos (enlaces):
+a:link — enlace no visitado aún
+a:visited — enlace ya visitado
+a:hover — cuando el puntero está encima
+a:active — mientras se hace clic
+
+6. ¿ Qué es la herencia?
+
+La herencia en CSS es el mecanismo por el cual ciertos estilos definidos en un elemento padre se transmiten automáticamente a sus hijos. Por ejemplo, si se define color: red en el <body>, todos los textos heredarán ese color a menos que lo sobreescriban. No todas las propiedades se heredan: color y font-family sí; border y margin no.
+
+7. ¿ En qué consiste el proceso denominado cascada?
+
+La cascada es el algoritmo que resuelve conflictos cuando múltiples reglas aplican al mismo elemento. Se basa en tres criterios en orden de importancia:
+
+1. Origen e importancia: !important tiene máxima prioridad; luego estilos del autor, del usuario, y del navegador.
+2. Especificidad: inline > ID > clase/pseudo-clase > tipo/etiqueta > universal.
+3. Orden de aparición: si todo es igual, gana la regla que aparece más abajo en el CSS.
+

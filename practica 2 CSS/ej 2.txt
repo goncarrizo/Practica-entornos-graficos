@@ -1,0 +1,29 @@
+p#normal {
+  font-family: arial, helvetica;
+  font-size: 11px;
+  font-weight: bold;
+}
+ solo aplica al elemento <p> que tenga id="normal". Establece fuente Arial o Helvetica, tamaño 11px y texto en negrita.
+
+ *#destacado {
+  border-style: solid;
+  border-color: blue;
+  border-width: 2px;
+}
+*#destacado aplica a cualquier elemento con id="destacado" (no solo párrafos). Agrega un borde sólido azul de 2px. Por eso tanto el <p id="destacado"> como el <table id="destacado"> reciben ese borde.
+
+#distinto {
+  background-color: #9EC7EB;
+  color: red;
+}
+Solo ID, sin especificar etiqueta. Aplica al elemento con id="distinto": fondo celeste (#9EC7EB) y texto rojo.
+
+<p id="normal">  texto Arial 11px en negrita, sin borde, fondo blanco.
+
+<p id="destacado">  borde sólido azul 2px (aplica *#destacado). Sin font especial.
+
+<table id="destacado">  también recibe el borde azul 2px (el selector *#destacado alcanza a cualquier elemento).
+
+<p id="distinto">  fondo celeste y texto rojo.
+
+

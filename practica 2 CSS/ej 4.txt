@@ -1,0 +1,26 @@
+* { color: green; }
+a:link    { color: gray; }
+a:visited { color: blue; }
+a:hover   { color: fuchsia; }
+a:active  { color: red; }
+p { font-family: arial, helvetica; font-size: 10px; color: black; }
+.contenido { font-size: 14px; font-weight: bold; }
+
+
+
+<p class="contenido" style="font-weight: normal;">...</p>
+<table><tr><td>tabla...</td></tr>
+  <tr><td><a href="...">enlace</a></td></tr>
+</table>
+El <p> recibe: font-family: arial y font-size: 10px (de la regla p), color: black (regla p gana sobre * por especificidad), font-size: 14px (de .contenido, gana sobre p porque tiene más especificidad), y font-weight: normal (inline style tiene la mayor prioridad, sobreescribe el bold de .contenido).
+
+La tabla y celdas heredan color: green del selector universal.
+El enlace muestra los colores de sus pseudo-clases según estado.
+
+<body class="contenido">
+  <p>texto...</p>
+  <table>...<a href="...">enlace</a>...</table>
+</body>
+el contenido se aplica al <body>, no al <p>. El <p> recibe sus propios estilos (font-size: 10px, color: black de la regla p), y hereda font-size: 14px y font-weight: bold del body solo si no hay una regla más específica. Sin embargo, la regla p define font-size: 10px explícitamente, lo que tiene más peso que la herencia del body, así que el párrafo queda en 10px.
+
+La tabla hereda font-size: 14px y font-weight: bold del body (no tiene regla propia).

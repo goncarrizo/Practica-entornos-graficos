@@ -1,0 +1,20 @@
+p.quitar { color: red; }
+*.desarrollo { font-size: 8px; }
+.importante { font-size: 20px; }
+p.quitar: solo los <p> con clase quitar, texto rojo.
+*.desarrollo: cualquier elemento con clase desarrollo, 8px.
+.importante: cualquier elemento con clase importante, 20px.
+
+<p class="desarrollo">, texto 8px (aplica *.desarrollo).
+
+<p class="quitar">, texto rojo (aplica p.quitar).
+
+<p> (sin clase), sin estilo CSS propio.
+
+<p class="importante">, texto 20px (aplica .importante).
+
+<h1 class="quitar">, NO recibe color rojo. El selector p.quitar solo aplica a párrafos <p>, no a <h1>.
+
+<p class="quitar importante">, se aplican ambas clases: color rojo Y font-size 20px. Cuando dos reglas establecen propiedades distintas, ambas se aplican sin conflicto.
+
+Recibe color: red de p.quitar y font-size: 20px de .importante. No hay conflicto porque son propiedades diferentes. Si ambas clases definieran font-size, ganaría la que tenga mayor especificidad o, si son iguales, la que aparezca más abajo en el CSS.
